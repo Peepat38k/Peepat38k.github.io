@@ -1,12 +1,10 @@
-// ข้อมูลโปรไฟล์
 const profile = {
-  name: "Peerapat Vichaiwong",
+  name: "พีรพัฒน์ วิไชยวงค์",
   title: "Web Developer & Designer",
   about: "สวัสดีครับ ผม Peerapat นักพัฒนาเว็บไซต์สาย Minimal ที่ชอบสร้างเว็บไซต์เรียบง่ายแต่ดูดี ใช้งานง่าย และ Responsive",
   profileImage: "images/profile.jpg"
 };
 
-// ข้อมูลผลงาน
 const portfolioProjects = [
   {
     id: 1,

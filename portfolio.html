@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Peerapat | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- ฟ้อนต์ -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap&subset=thai" rel="stylesheet" />
 </head>
 <body>
   <header class="minimal-header small">
@@ -18,7 +20,7 @@
     <a href="portfolio.html" class="active">Portfolio</a>
   </nav>
 
-  <main class="portfolio">
+  <main>
     <div class="portfolio-grid" id="portfolioGrid"></div>
   </main>
 
@@ -28,14 +30,13 @@
 
   <script src="data.js"></script>
   <script>
-    // โหลดผลงาน
     const grid = document.getElementById("portfolioGrid");
     portfolioProjects.forEach(project => {
       const item = document.createElement("div");
-      item.classList.add("portfolio-item");
+      item.className = "portfolio-item";
       item.innerHTML = `
         <a href="project.html?id=${project.id}">
-          <img src="${project.image}" alt="${project.title}">
+          <img src="${project.image}" alt="${project.title}" />
           <h3>${project.title}</h3>
           <p>${project.description}</p>
         </a>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Peerapat | Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- ฟ้อนต์ -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap&subset=thai" rel="stylesheet" />
 </head>
 <body>
   <header class="minimal-header" id="header"></header>
@@ -23,9 +25,8 @@
 
   <script src="data.js"></script>
   <script>
-    // โหลดข้อมูลโปรไฟล์
     document.getElementById("header").innerHTML = `
-      <img src="${profile.profileImage}" alt="Profile" class="profile-pic">
+      <img src="${profile.profileImage}" alt="Profile Picture" class="profile-pic" />
       <h1>${profile.name}</h1>
       <p>${profile.title}</p>
       <a href="portfolio.html" class="btn-minimal">View Portfolio</a>
