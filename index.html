@@ -3,60 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peerapat | Portfolio</title>
+  <title>Peerapat | Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Peerapat Vichaiwong</h1>
-    <p>Web Developer | Designer | Creator</p>
+  <header class="minimal-header" id="header">
+    <!-- Content will be injected by JS -->
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="portfolio.html">Portfolio</a>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m Peerapat, a passionate web developer with a love for creating beautiful and functional websites. With experience in HTML, CSS, JavaScript, and more, I bring ideas to life on the web.</p>
-  </section>
-
-  <section id="portfolio">
-    <h2>My Work</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200" alt="Project 1">
-        <h3>Project One</h3>
-        <p>A brief description of this project.</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2">
-        <h3>Project Two</h3>
-        <p>A brief description of this project.</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200" alt="Project 3">
-        <h3>Project Three</h3>
-        <p>A brief description of this project.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:peerapat@example.com">peerapat@example.com</a></p>
-    <p>Phone: +66 123 456 789</p>
-    <p>Follow me: 
-      <a href="#">Facebook</a> | 
-      <a href="#">LinkedIn</a> | 
-      <a href="#">GitHub</a>
-    </p>
-  </section>
+  <main class="about" id="about">
+    <!-- Content will be injected by JS -->
+  </main>
 
   <footer>
-    &copy; 2025 Peerapat Vichaiwong. All rights reserved.
+    &copy; <span id="year"></span> Peerapat Vichaiwong
   </footer>
+
+  <script src="data.js"></script>
+  <script>
+    // โหลดข้อมูลจาก data.js
+    document.getElementById("header").innerHTML = `
+      <img src="${profile.profileImage}" alt="Profile" class="profile-pic">
+      <h1>${profile.name}</h1>
+      <p>${profile.title}</p>
+      <a href="portfolio.html" class="btn-minimal">View Portfolio</a>
+    `;
+
+    document.getElementById("about").innerHTML = `
+      <h2>About Me</h2>
+      <p>${profile.about}</p>
+    `;
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

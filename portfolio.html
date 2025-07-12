@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peerapat | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="minimal-header small">
+    <h1>Portfolio</h1>
+    <p>Selected projects showcasing clean design and functionality.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+  </nav>
+
+  <main class="portfolio">
+    <div class="portfolio-grid" id="portfolioGrid">
+      <!-- Projects will be injected by JS -->
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Peerapat Vichaiwong
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    const grid = document.getElementById("portfolioGrid");
+
+    portfolioProjects.forEach(project => {
+      const item = document.createElement("div");
+      item.classList.add("portfolio-item");
+      item.innerHTML = `
+        <img src="${project.image}" alt="${project.title}">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+      `;
+      grid.appendChild(item);
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
