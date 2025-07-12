@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Detail</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="minimal-header small" id="projectHeader"></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+  </nav>
+
+  <main class="project-detail" id="projectDetail"></main>
+
+  <footer>
+    &copy; <span id="year"></span> Peerapat Vichaiwong
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const projectId = parseInt(params.get("id"));
+    const project = portfolioProjects.find(p => p.id === projectId);
+
+    if (project) {
+      document.title = `${project.title} | Peerapat`;
+      document.getElementById("projectHeader").innerHTML = `
+        <h1>${project.title}</h1>
+        <p>${project.description}</p>
+      `;
+      document.getElementById("projectDetail").innerHTML = `
+        <img src="${project.image}" alt="${project.title}" style="width:100%;border-radius:8px;margin-bottom:20px;">
+        <p>${project.details}</p>
+        <a href="portfolio.html" class="btn-minimal">← Back to Portfolio</a>
+      `;
+    } else {
+      document.getElementById("projectHeader").innerHTML = "<h1>Project Not Found</h1>";
+      document.getElementById("projectDetail").innerHTML = "<p>The project you are looking for does not exist.</p>";
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
