@@ -8,18 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="minimal-header" id="header">
-    <!-- Content will be injected by JS -->
-  </header>
+  <header class="minimal-header" id="header"></header>
 
   <nav>
     <a href="index.html" class="active">Home</a>
     <a href="portfolio.html">Portfolio</a>
   </nav>
 
-  <main class="about" id="about">
-    <!-- Content will be injected by JS -->
-  </main>
+  <main class="about" id="about"></main>
 
   <footer>
     &copy; <span id="year"></span> Peerapat Vichaiwong
@@ -27,19 +23,17 @@
 
   <script src="data.js"></script>
   <script>
-    // โหลดข้อมูลจาก data.js
+    // โหลดข้อมูลโปรไฟล์
     document.getElementById("header").innerHTML = `
       <img src="${profile.profileImage}" alt="Profile" class="profile-pic">
       <h1>${profile.name}</h1>
       <p>${profile.title}</p>
       <a href="portfolio.html" class="btn-minimal">View Portfolio</a>
     `;
-
     document.getElementById("about").innerHTML = `
       <h2>About Me</h2>
       <p>${profile.about}</p>
     `;
-
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
