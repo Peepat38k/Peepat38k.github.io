@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - ไม่พบหน้าเว็บ</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Sarabun', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 10rem;
+      margin: 0;
+      color: #ff6b6b;
+      user-select: none;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 400px;
+      color: #666;
+    }
+
+    a.btn-home {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    a.btn-home:hover {
+      background-color: #ff4c4c;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 6rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>404</h1>
+  <h2>ไม่พบหน้าที่คุณค้นหา</h2>
+  <p>ขออภัย หน้าเว็บนี้อาจถูกลบหรือย้ายไปแล้ว ลองกลับไปที่หน้าหลักหรือเช็ค URL อีกครั้ง</p>
+  <a href="index.html" class="btn-home">กลับสู่หน้าหลัก</a>
+</body>
+</html>
