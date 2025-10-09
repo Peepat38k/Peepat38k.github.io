@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peerapat | Home</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sarabun:wght@400;600&display=swap&subset=thai" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Inter', 'Sarabun', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white shadow fixed w-full z-50">
+    <div class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Logo" class="w-8 h-8 md:w-10 md:h-10 rounded-full" />
+        <h1 class="text-lg md:text-xl font-bold">Peerapat</h1>
+      </div>
+      <nav class="text-sm md:text-base">
+        <a href="#about" class="px-2 md:px-3 py-1 hover:text-blue-500">About</a>
+        <a href="portfolio.html" class="px-2 md:px-3 py-1 hover:text-blue-500">Portfolio</a>
+        <a href="#contact" class="px-2 md:px-3 py-1 hover:text-blue-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="pt-24 pb-8 md:pb-12 text-center" data-aos="fade-up">
+    <img id="profileImage" class="mx-auto rounded-full w-28 md:w-36 lg:w-40 h-28 md:h-36 lg:h-40 border-4 border-blue-500 shadow-lg" />
+    <h2 id="name" class="text-2xl md:text-3xl font-semibold mt-3"></h2>
+    <p id="title" class="text-base md:text-lg text-gray-600"></p>
+    <p id="aboutText" class="mt-3 max-w-lg mx-auto text-gray-700 text-sm md:text-base"></p>
+  </section>
+
+  <!-- Portfolio Preview -->
+  <section class="py-10 md:py-16 bg-gray-100">
+    <div class="container mx-auto px-4 md:px-6">
+      <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12" data-aos="fade-up">ผลงานล่าสุด</h3>
+      <div id="portfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8"></div>
+      <div class="text-center mt-5">
+        <a href="portfolio.html" class="text-blue-500 font-semibold hover:underline text-sm md:text-base">ดูผลงานเพิ่มเติม →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-white text-center py-3 md:py-4 fixed bottom-0 left-0 w-full shadow-inner text-xs md:text-sm">
+    <p>&copy; 2025 Peerapat Vichaiwong | Made with ❤️</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("profileImage").src = profile.profileImage;
+    document.getElementById("name").textContent = profile.name;
+    document.getElementById("title").textContent = profile.title;
+    document.getElementById("aboutText").textContent = profile.about;
+    const grid = document.getElementById("portfolioGrid");
+    portfolioProjects.slice(0, 3).forEach((p, i) => {
+      grid.innerHTML += `
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="${i*100}">
+          <img src="${p.image}" alt="${p.title}" class="w-full">
+          <div class="p-4 md:p-6">
+            <h4 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">${p.title}</h4>
+            <p class="text-gray-600 mb-2 md:mb-4 text-sm md:text-base">${p.description}</p>
+            <a href="project.html?id=${p.id}" class="btn-primary text-sm md:text-base">ดูรายละเอียด</a>
+          </div>
+        </div>`;
+    });
+  </script>
+</body>
+</html>
