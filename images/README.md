@@ -8,6 +8,7 @@
 images/
 ├── profile/          # รูปภาพโปรไฟล์ (รูปส่วนตัว)
 ├── projects/         # รูปภาพผลงานโปรเจกต์
+├── education/        # โลโก้โรงเรียนสำหรับส่วนประวัติการศึกษา
 └── README.md         # ไฟล์นี้
 ```
 
@@ -27,6 +28,13 @@ images/
   - `mobile-app.jpg`
 - ขนาดแนะนำ: 1200x800 pixels หรือมากกว่า (สัดส่วน 16:9 หรือ 4:3)
 - รูปแบบไฟล์: JPG, PNG, WebP
+
+### โลโก้โรงเรียน (Education Section)
+- เพิ่มโลโก้โรงเรียนในโฟลเดอร์ `education/`
+- ชื่อไฟล์แนะนำ: `elementary.png`, `middle-school.png`, `high-school.png`
+- ขนาดแนะนำ: 200x200 pixels หรือมากกว่า (สัดส่วน 1:1)
+- รูปแบบไฟล์: PNG (แนะนำให้ใช้ PNG เพื่อความชัดเจน), JPG, WebP
+- โลโก้จะแสดงในวงกลม ดังนั้นควรเตรียมโลโก้ให้เหมาะสม
 
 ## การเพิ่มรูปภาพใน HTML
 
@@ -53,13 +61,17 @@ images/
 ├── profile/
 │   ├── profile.jpg
 │   └── avatar.png
-└── projects/
-    ├── webapp.jpg
-    ├── mobile-app.jpg
-    ├── ai-project.jpg
-    ├── game.jpg
-    ├── security.jpg
-    └── cloud-app.jpg
+├── projects/
+│   ├── webapp.jpg
+│   ├── mobile-app.jpg
+│   ├── ai-project.jpg
+│   ├── game.jpg
+│   ├── security.jpg
+│   └── cloud-app.jpg
+└── education/
+    ├── elementary.png
+    ├── middle-school.png
+    └── high-school.png
 ```
 
 ## หมายเหตุ
