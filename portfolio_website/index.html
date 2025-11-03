@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ผลงานคอมพิวเตอร์</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Load Config First -->
+    <script src="config.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">หน้าแรก</a></li>
+                <li><a href="#about" class="nav-link">เกี่ยวกับ</a></li>
+                <li><a href="#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="#projects" class="nav-link">ผลงาน</a></li>
+                <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">สวัสดีครับ</span>
+                    <span class="name">ฉันคือ <span class="highlight">นักพัฒนา</span></span>
+                    <span class="description">ที่หลงใหลในเทคโนโลยีและนวัตกรรม</span>
+                </h1>
+                <p class="hero-subtitle">ยินดีต้อนรับสู่ Portfolio ของฉัน</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">ดูผลงาน</a>
+                    <a href="#contact" class="btn btn-secondary">ติดต่อฉัน</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Content will be rendered from config.js -->
+                <div class="image-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">เกี่ยวกับฉัน</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        ฉันเป็นนักศึกษาคอมพิวเตอร์ที่มีความสนใจในด้านการพัฒนาโปรแกรมประยุกต์
+                        เว็บไซต์ และเทคโนโลยีต่างๆ ฉันมีความกระตือรือร้นในการเรียนรู้เทคโนโลยีใหม่ๆ
+                        และพร้อมที่จะสร้างสรรค์ผลงานที่สร้างคุณค่าให้กับผู้ใช้
+                    </p>
+                    <p>
+                        นอกจากทักษะด้านการเขียนโค้ดแล้ว ฉันยังมีความสามารถในการแก้ไขปัญหา
+                        การทำงานเป็นทีม และการสื่อสารที่ดี ซึ่งช่วยให้สามารถทำงานได้อย่างมีประสิทธิภาพ
+                    </p>
+                    <div class="about-stats">
+                        <!-- Stats will be rendered from config.js -->
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder large">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">ทักษะและเทคโนโลยี</h2>
+            <div class="skills-grid">
+                <!-- Skills will be rendered from config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">ผลงาน</h2>
+            <div class="projects-grid">
+                <!-- Projects will be rendered from config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">ติดต่อฉัน</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text">
+                        หากคุณสนใจในผลงานของฉัน หรือต้องการติดต่อเพื่อสอบถาม
+                        หรือร่วมงานกัน กรุณาติดต่อผ่านช่องทางด้านล่าง
+                    </p>
+                    <div class="contact-methods">
+                        <!-- Content will be rendered from config.js -->
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">ชื่อ</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">อีเมล</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">ข้อความ</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Portfolio. สร้างด้วย HTML, CSS และ JavaScript</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
